@@ -1,5 +1,6 @@
 module Main exposing (..)
 
+import Browser
 import Html
 
 
@@ -14,7 +15,7 @@ type Msg = NoOp
 
 init : () -> ( Model, Cmd Msg )
 init _ =
-      (model, Cmd.none)
+      ({}, Cmd.none)
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -26,8 +27,8 @@ update msg model =
 
 view : Model -> Browser.Document Msg
 view model =
-    { title = '🌸'
-    , body = [ Html.div [] [] ]
+    { title = "🌸"
+    , body = [ Html.div [] [ Html.text "good morning" ] ]
     }
 
 
